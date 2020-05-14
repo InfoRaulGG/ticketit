@@ -18,6 +18,9 @@ const TicketSchema = new Schema({
         type: Boolean,
         required: "The isActive is required"
     },
+    file: {
+        type: String,
+    },
     teamMembers: [{
         type: String,
     }],
@@ -25,5 +28,5 @@ const TicketSchema = new Schema({
     timestamps: true
 });
 
-const ticket = mongoose.Model("ticket", TicketSchema);
+const ticket = mongoose.model("ticket", TicketSchema);
 module.exports = ticket;

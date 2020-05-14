@@ -6,3 +6,5 @@ const PORT = process.env.PORT || 4299;
 app.listen(PORT, () => {
     console.log("Servidor corriendo en puerto: " + PORT);
 });
+
+module.exports = app;

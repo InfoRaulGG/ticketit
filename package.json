@@ -4,17 +4,21 @@
     "description": "Aplicación para reportar tickets y solucionarlos",
     "main": "index.js",
     "scripts": {
-        "server": "node index.js",
-        "test": "NODE_ENV=test nodemon --exec 'mocha -R min'"
+        "server": "SET NODE_ENV=pro & nodemon index.js",
+        "test": "SET NODE_ENV=test & nodemon --exec \"mocha -R min --timeout 10000\""
     },
     "author": "Raúl",
     "license": "MIT",
     "dependencies": {
         "body-parser": "^1.19.0",
+        "chai": "^4.2.0",
+        "chai-http": "^4.3.0",
+        "connect-multiparty": "^2.2.0",
         "dotenv": "^8.2.0",
         "express": "^4.17.1",
         "mocha": "^7.1.2",
         "mongoose": "^5.9.13",
+        "multipart": "^0.1.5",
         "supertest": "^4.0.2"
     }
 }
