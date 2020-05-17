@@ -8,7 +8,7 @@ module.exports = {
         Ticket.find().sort({ createdAt: 'desc' })
             .then(tickets => {
                 return res.status(200).send({
-                    Tickets: tickets
+                    tickets
                 });
             })
             .catch(next);

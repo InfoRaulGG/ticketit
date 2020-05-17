@@ -5,7 +5,7 @@ const MONGO_URI = process.env.DEV_DB;
 
 mongoose.Promise = global.Promise;
 
-if (process.env.NODE_ENV === "pro") {
+if (process.env.NODE_ENV.toLocaleLowerCase().trim() === 'pro') {
     mongoose.connect(MONGO_URI, {
         useNewUrlParser: true,
         useUnifiedTopology: true,

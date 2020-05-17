@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
 
 const initialData = [{
-        "id": 1,
+        "id_prueba": 1,
         "title": "test",
         "description": "text",
         "level": "high",
@@ -13,7 +13,7 @@ const initialData = [{
         ]
     },
     {
-        "id": 2,
+        "id_prueba": 2,
         "title": "test",
         "description": "text",
         "level": "high",
@@ -23,7 +23,7 @@ const initialData = [{
         ]
     },
     {
-        "id": 3,
+        "id_prueba": 3,
         "title": "test",
         "description": "text",
         "level": "high",
@@ -36,11 +36,13 @@ const initialData = [{
 
 
 before(done => {
+
     mongoose.connect("mongodb://localhost/ticket_test", {
         useNewUrlParser: true,
         useUnifiedTopology: true,
         useFindAndModify: false
     });
+
     mongoose.connection
         .once("open", () => {
             console.log("Connected to DB test");
@@ -49,17 +51,12 @@ before(done => {
         .on("error", err => {
             console.warn("Warning", err);
         });
-});
-/*
-beforeEach((done) => {
 
-    mongoose.connection.collection("tickets").drop(() => {
-        done();
-    });
 
-    mongoose.connection.collection("tickets").remove();
+    mongoose.connection.dropDatabase("ticket_test");
+
+    //mongoose.connection.dropCollection("tickets");
 
     mongoose.connection.collection("tickets").insertMany(initialData);
 
 });
-*/
