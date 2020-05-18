@@ -12,7 +12,8 @@ const TicketSchema = new Schema({
     },
     level: {
         type: String,
-        enum: ["low", "medium", "high"]
+        enum: ["low", "medium", "high"],
+        required: "The level of ticket is required"
     },
     isActive: {
         type: Boolean,

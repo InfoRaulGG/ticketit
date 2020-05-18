@@ -82,7 +82,7 @@ module.exports = {
             .then(ticket => {
                 return res.status(200).send({
                     Message: "Ticket updated sucesfully",
-                    ticket
+                    Ticket: objectUpdated
                 });
             })
             .catch(next);

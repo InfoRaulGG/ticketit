@@ -14,11 +14,9 @@ router.post("/ticket", controller.post);
 
 router.post("/ticket/:id?", multipartMiddleware, controller.uploadFile);
 
-router.delete("/ticket", controller.delete);
+router.delete("/ticket/:id?", controller.delete);
 
 router.put("/ticket/:id?", controller.update);
-
-
 
 
 module.exports = router;

@@ -4,7 +4,7 @@
     "description": "Aplicación para reportar tickets y solucionarlos",
     "main": "index.js",
     "scripts": {
-        "server": "SET NODE_ENV=pro & nodemon index.js",
+        "start": "NODE_ENV=pro & node index.js",
         "test": "SET NODE_ENV=test & nodemon --exec \"mocha -R min --timeout 10000\""
     },
     "author": "Raúl",
@@ -17,7 +17,7 @@
         "dotenv": "^8.2.0",
         "express": "^4.17.1",
         "mocha": "^7.1.2",
-        "mongoose": "^5.9.13",
+        "mongoose": "^5.9.14",
         "multipart": "^0.1.5",
         "supertest": "^4.0.2"
     }
