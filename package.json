@@ -17,7 +17,7 @@
         "dotenv": "^8.2.0",
         "express": "^4.17.1",
         "mocha": "^7.1.2",
-        "mongoose": "^5.9.14",
+        "mongoose": "^6.13.6",
         "multipart": "^0.1.5",
         "supertest": "^4.0.2"
     }
